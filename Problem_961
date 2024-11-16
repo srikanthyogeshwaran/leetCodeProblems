@@ -1,0 +1,14 @@
+N-Repeated Element in Size 2N Array
+
+class Solution {
+    public int repeatedNTimes(int[] nums) {
+        HashSet s=new HashSet<>();
+        for(int i=0;i<nums.length;i++){
+            if(!s.contains(nums[i]))
+                s.add(nums[i]);
+            else 
+                return nums[i];
+        }
+        return -1;
+    }
+}
